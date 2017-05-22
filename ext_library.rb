@@ -4,9 +4,12 @@ class Library
   end
 
   def full_book_details()
+    full_list = []
     for book in @books
-      return "#{book[:title]} was rented by #{book[:rentail_detials][:student_name]} and is due back on #{book[:rentail_detials][:date]}."
+    full_book = "#{book[:title]} was rented by #{book[:rental_details][:student_name]} and is due back on #{book[:rental_details][:date]}."
+      full_list.push(full_book)
     end
+    return full_list
   end
 
 end
